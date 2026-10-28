@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Geração Lula">
+  <rect width="64" height="64" rx="14" fill="#fd0000"/>
+  <path
+    d="M32 9.5 37.3 25h16.4L40.4 34.6l5.1 15.8L32 40.7 18.5 50.4l5.1-15.8L10.3 25h16.4L32 9.5Z"
+    fill="#fbfbfb"
+    transform="rotate(8 32 32)"
+  />
+</svg>

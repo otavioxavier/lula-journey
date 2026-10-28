@@ -1,87 +1,44 @@
-# Welcome to React Router!
+# Trajetória de Lula
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Aplicação React (React Router Framework Mode) para o trabalho acadêmico de Engenharia de Software — linha do tempo informativa sobre Luiz Inácio Lula da Silva, com seis componentes implementados no projeto e navegação entre páginas (desafio extra).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
-
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
+## Como rodar (GitHub Codespaces ou local)
 
 ```bash
 npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Abra a URL exibida no terminal (em geral `http://localhost:5173`).
 
-## Building for Production
-
-Create a production build:
+## Build e checagem
 
 ```bash
+npm run typecheck
 npm run build
+npm start
 ```
 
-## Deployment
+## Mapa do site
 
-### Docker Deployment
+| Rota | Conteúdo | Componentes em destaque |
+|------|----------|-------------------------|
+| `/` | Hero, marcos e faixa de fotos | Magic UI (BlurFade, BorderBeam, NumberTicker), React Bits (BlurText) |
+| `/trajetoria` | Fases da vida pública | **Acordeão** |
+| `/fatos` | Cards históricos | **Menu suspenso**, **Paginação**, **Toast**, SpotlightCard |
+| `/perfil` | Biografia e temas | **Abas** |
+| `/quiz` | 10 perguntas | **Barra de progresso**, **Toast**, CountUp |
 
-To build and run using Docker:
+## Componentes avaliados (`app/components/ui/`)
 
-```bash
-docker build -t my-app .
+- `Accordion`, `Pagination`, `ProgressBar`, `Tabs`, `DropdownMenu`, `Toast`
+- Estado global: `ToastProvider` em `app/components/toast-context.tsx` (Context API)
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+## Imagens
 
-The containerized application can be deployed to any platform that supports Docker, including:
+Dez fotos em `public/images/`, baixadas do Wikimedia Commons. Créditos completos no rodapé do site e em `app/data/image-credits.ts`.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+## Stack
 
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+- React 19, React Router 8, TypeScript, Tailwind CSS 4
+- `motion` (efeitos Magic UI / React Bits adaptados manualmente)
